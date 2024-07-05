@@ -1,0 +1,65 @@
+#dados-contato {
+  & button {
+    all: unset;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    background-color: var(--brand-dark);
+    border-radius: 8px;
+    padding: 0.81rem 1.25rem;
+
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-heading);
+
+    margin: 3rem 0 0 auto;
+
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+#termos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  .termos-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    & .check {
+      margin: 0;
+      background-image: url(../../assets/checkbox.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    & input[type="checkbox"]:checked {
+      background-image: url(../../assets/checkbox-checked.svg);
+      background-repeat: no-repeat;
+    }
+
+    & input {
+      all: unset;
+      position: absolute;
+      inset: 0;
+    }
+
+    & label {
+      padding-left: 0.75rem;
+    }
+
+    & strong {
+      color: var(--brand-light);
+    }
+  }
+}

@@ -1,0 +1,89 @@
+#container-evento {
+  margin-block: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 0.5rem;
+
+  .wrapper-evento {
+    background-color: var(--shape-button);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    position: relative;
+    padding: 0.25rem 0.25rem 0.5rem;
+    border: 2px solid transparent;
+    border-radius: 4px;
+
+    & input[type="radio"] {
+      all: unset;
+      position: absolute;
+      inset: 0;
+
+      &:checked {
+        border: 2px solid var(--brand-light);
+      }
+    }
+
+    & label {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+#file-user {
+  & input[type="file"] {
+    border: 0;
+    background-color: transparent;
+  }
+
+  > div {
+    position: relative;
+    margin: 0;
+  }
+
+  & #container-upload {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    cursor: pointer;
+
+    background-color: var(--shape-button);
+    border-radius: 8px;
+
+    padding: 0.65rem 0.75rem;
+
+    & img {
+      height: 16px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: pointer;
+      #upload {
+        background-image: url(../../assets/upload-checked.svg);
+      }
+    }
+  }
+
+  & input::file-selector-button {
+    opacity: 0;
+    color: var(--input-placeholder);
+  }
+}
+
+#upload {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../assets/upload.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

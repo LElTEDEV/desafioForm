@@ -1,0 +1,27 @@
+.logo {
+  background-image: url(/assets/Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 728px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  border-radius: 12px;
+
+  & img + img {
+    margin-top: 1rem;
+  }
+
+  & #festa {
+    width: 45px;
+    height: 48px;
+  }
+
+  & #logo {
+    width: 143px;
+    height: 40px;
+  }
+}

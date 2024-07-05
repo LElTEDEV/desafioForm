@@ -1,0 +1,73 @@
+.lado-lado {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1rem;
+
+  #radio-button {
+    #container-escolha {
+      display: grid;
+      gap: 0.25rem;
+      grid-template-columns: repeat(2, 1fr);
+
+      background-color: var(--input-base);
+
+      border: 1px solid var(--input-stroke);
+      border-radius: 8px;
+
+      margin-top: 13px;
+    }
+
+    .radio-escolha {
+      position: relative;
+
+      margin: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 0.656rem 1.125rem;
+
+      img {
+        height: 16px;
+      }
+
+      input[type="radio"] {
+        all: unset;
+        position: absolute;
+        inset: 0;
+      }
+
+      &:focus-within,
+      &:checked {
+        background-color: var(--input-stroke);
+        border-radius: 8px;
+
+        & label {
+          color: var(--text-heading);
+        }
+      }
+    }
+  }
+}
+
+#escolha-presencial label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  background-image: url(../../assets/building-2.svg);
+  background-size: contain;
+  height: 16px;
+  width: 16px;
+}
+
+#escolha-presencial input[type="radio"]:checked + label::before {
+  background-image: url(../../assets/building-checked.svg);
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  inset: 0;
+}

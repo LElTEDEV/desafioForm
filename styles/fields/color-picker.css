@@ -1,0 +1,80 @@
+.container-cor {
+  display: flex;
+  gap: 0 0.75rem;
+
+  & input[type="radio"] {
+    display: none;
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+
+    border-radius: 50%;
+
+    background-color: var(--shape-button);
+
+    & label {
+      cursor: pointer;
+
+      display: block;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      background-color: aqua;
+    }
+  }
+
+  & input[type="radio"]:checked + div {
+    border: 2px solid var(--brand-light);
+  }
+}
+
+.container-cor label.blue {
+  background-color: var(--brand-light);
+}
+
+.container-cor label.navy {
+  background-color: var(--navy);
+}
+
+.container-cor label.purple {
+  background-color: var(--purple);
+}
+
+.container-cor label.fuschia {
+  background-color: var(--fuschia);
+}
+
+.container-cor label.pink {
+  background-color: var(--pink);
+}
+
+.container-cor label.danger {
+  background-color: var(--danger);
+}
+
+.container-cor label.orange {
+  background-color: var(--orange);
+}
+
+.container-cor label.yellow {
+  background-color: var(--yellow);
+}
+
+.container-cor label.lime {
+  background-color: var(--lime);
+}
+
+.container-cor label.green {
+  background-color: var(--green);
+}
+
+.container-cor label.cyan {
+  background-color: var(--cyan);
+}

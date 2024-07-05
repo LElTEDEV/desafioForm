@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-light: #59b2ff;
+  --brand-mid: #3487cf;
+  --brand-dark: #1d6fb6;
+
+  --purple: #b259ff;
+  --fuschia: #ff59f9;
+  --pink: #ff598b;
+  --orange: #ff8b59;
+  --yellow: #ffcd59;
+  --lime: #e1ff59;
+  --green: #59ff91;
+  --cyan: #59fff9;
+  --navy: #6a59ff;
+
+  --danger: #ff5959;
+
+  --input-base: #1c1f21;
+  --input-stroke: #363b40;
+  --input-placeholder: #869198;
+
+  --shape-background: #131516;
+  --shape-body: #212427;
+  --shape-button: #2d3136;
+  --shape-hover: #383d42;
+
+  --text-body: #c8cdd0;
+  --text-heading: #f9f9f9;
+
+  --font-baloo: "Baloo 2", sans-serif;
+  --font-sans: "Open Sans", sans-serif;
+}
+
+#page {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  padding: 1.25rem;
+  gap: 1.25rem;
+  background-color: var(--shape-background);
+}
+
+main {
+  background-color: var(--shape-body);
+  border-radius: 0.75rem;
+}
+
+h1 {
+  color: var(--text-heading);
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: var(--font-baloo);
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: lighter;
+  font-family: var(--font-sans);
+  color: var(--text-heading);
+}
+
+fieldset {
+  border: none;
+
+  & div {
+    margin-top: 1rem;
+  }
+
+  & div + div {
+    margin-top: 1rem;
+  }
+}
+
+legend {
+  font-family: var(--font-baloo);
+  font-weight: bold;
+  font-size: 1.12rem;
+  line-height: 1.25;
+  color: var(--text-heading);
+}
+
+label {
+  color: #c8cdd0;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: var(--input-base);
+  color: var(--text-heading);
+
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  padding: 0.812rem 1rem;
+
+  margin-top: 0.75rem;
+
+  &:focus {
+    border: 1px solid var(--brand-light);
+    outline: none;
+  }
+}
+
+::placeholder {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--input-placeholder);
+}
+
+.legenda {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  img {
+    height: 24px;
+  }
+}
+
+form fieldset + fieldset {
+  margin-top: 3rem;
+}
